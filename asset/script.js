@@ -12,17 +12,14 @@ addElement.onclick = function () {
   clonedElement.id = "p" + (elementId + 1);
   parent.append(clonedElement);
   ++elementId;
-  // console.log(elementId);
+  console.log(elementId);
+  if (elementId % 2 == 0) {
+    clonedElement.classList.remove("bg-dark");
+    clonedElement.classList.add("text-size", "box-shadow");
+  };
 };
 
 // Delet Element
-// deleteElement.onclick = function () {
-//   const parent = document.getElementById("wrapper");
-//   parent.removeChild(parent.lastElementChild);
-//   --elementId;
-//   console.log(elementId);
-// };
-
 deleteElement.onclick = function () {
   const parent = document.getElementById("wrapper");
   if (elementId > 1) {
@@ -33,4 +30,6 @@ deleteElement.onclick = function () {
     alert("Jangan dihapus semua donk say");
   }
 };
+
+// console.log(elementId);
 
