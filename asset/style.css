@@ -1,0 +1,12 @@
+#p1 {
+    background-color: rgb(0, 47, 255);
+    margin-bottom: 5px;
+}
+
+#add {
+    background-color: rgb(247, 9, 9);
+    color: rgb(255, 255, 255);
+    width: 25%;
+    margin-top: 10px;
+    padding: 10px;
+}
