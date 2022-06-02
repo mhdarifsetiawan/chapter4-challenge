@@ -14,8 +14,8 @@ addElement.onclick = function () {
   ++elementId;
   console.log(elementId);
   if (elementId % 2 == 0) {
-    clonedElement.classList.remove("bg-dark");
-    clonedElement.classList.add("text-size", "box-shadow");
+    clonedElement.classList.remove("bgDom");
+    clonedElement.classList.add("bgLight", "text-size", "textDark", "box-shadow");
   };
 };
 

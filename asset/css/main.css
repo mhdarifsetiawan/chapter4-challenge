@@ -1,0 +1,53 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 150vh;
+    background-color: #2b6777;
+    width: auto;
+    overflow-y: scroll;
+}
+
+/* Backgroun-Color */
+.bgDark {
+    background-color: black !important;
+}
+
+.bgLight {
+    background-color: white !important;
+}
+
+.bgPrimary {
+    background-color: #52ab98 !important;
+}
+
+.bgSecondary {
+    background-color: #c8d8e4 !important;
+}
+
+/* Text-Color */
+.textDark {
+    color: black;
+}
+
+.textLight {
+    color: white;
+}
+
+.textPrimary {
+    color: #2b6777 !important;
+}
+
+/* Button */
+.btn {
+    padding: 0.5rem;
+    width: auto;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}

@@ -5,41 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
-    <link rel="stylesheet" href="../asset/style.css">
-    <title>Chapter4 - Task 1 - DOM Manipulation</title>
+    <link rel="stylesheet" href="../asset/css/main.css">
+    <link rel="stylesheet" href="../asset/css/homepage.css">
+    <link rel="stylesheet" href="../asset/css/dom.css">
+    <title>Task 1 - DOM Manipulation | Chapter 4</title>
 </head>
 <body id="root">
-    <div class="container">
         
         <header>
-            <div class="header-section">
-                <button>
-                    <a href="/">Home</a>
-                </button>
-                <h1>Chapter : 4</h1>
-                <h2>Task : 1</h2>
-                <h3>DOM Manipulation</h3>
-                <p>Class : Full Stack Web (FSW)</p>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a class="active" href="./index.html">Task 1</a></li>
+                    <li><a href="../tic-tac-toe-challenge/index.html">Task 2</a></li>
+                  </ul>
+            </nav>
+            <div class="headerSection">
+                <h1>Task : 1</h1>
+                <h2>DOM Manipulation</h2>
                 <p>Name : Muhammad Arif Setiawan</p>
+                <p>Class : Full Stack Web (FSW)</p>
+                <p>Wave : 23</p>
+                <p>Facilitator : Lilik Setiyawan</p>
             </div>
         </header>
 
-        <div id="wrapper">
-            <div id="p1" class="paragraf bg-dark">
-                <div class="satu">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum distinctio neque recusandae pariatur sint laudantium sapiente velit aliquid veritatis voluptate?</p>
+        <main>
+            <div class="container">
+                <section id="wrapper">
+                    <div id="p1" class="paragraf bgDom">
+                        <div class="satu">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit in, blanditiis impedit, minima alias eum optio ullam aliquam consequuntur culpa nisi nesciunt tenetur temporibus excepturi.</p>
+                        </div>
+                    </div>
+                </section>
+                <div class="button">
+                    <div id="add" class="btn bgPrimary">Add Element</div>
+                    <div id="delete" class="btn bgSecondary">Delete Element</div>
                 </div>
             </div>
-        </div>
-        <div class="button">
-            <div id="add" class="btn">Add Element</div>
-            <div id="delete" class="btn">Delete Element</div>
-        </div>
-
-    </div>
+        </main>
 
     <!-- Script -->
-    <script src="../asset/script.js" defer></script>
+    <script src="../asset//js/task-dom.js" defer></script>
     <!-- End Script -->
 </body>
 </html>

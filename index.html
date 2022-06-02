@@ -4,35 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./asset/style.css">
-    <title>Task & quiz - Chapter 4</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./asset/css/main.css">
+    <link rel="stylesheet" href="./asset/css/homepage.css">
+    <title>Chapter 4</title>
 </head>
 <body>
     <header>
-        <h1>Mhd Arif Setiawan</h1>
+        <nav>
+            <ul>
+                <li><a class="active" href="/">Home</a></li>
+                <li><a href="./dom-challenge/index.html">Task 1</a></li>
+                <li><a href="./tic-tac-toe-challenge/index.html">Task 2</a></li>
+              </ul>
+        </nav>
+        <div class="headerSection textDark">
+            <h1>Chapter : 4</h1>
+            <p class="my-0">Name : Muhammad Arif Setiawan</p>
+            <p class="my-0">Class : Full Stack Web (FSW)</p>
+            <p class="my-0">Wave : 23</p>
+            <p class="my-0">facilitator : Lilik Setiyawan</p>
+        </div>
     </header>
-    <section class="container">
-        <main>
-            <section class="task">
-                <h2>Task</h2>
-                <p><b><i>Task</i></b> adalah PR/Tugas/Kuis yang diberikan oleh Fasilitator kepada Siswa</p>
-                <button>
-                    <a href="./dom-challenge/index.html">Task 1: DOM Manipulation</a>
-                </button>
-                <button>
-                    <a href="./tic-tac-toe-challenge/index.html">Task 2: Game Tic Tac Toe</a>
-                </button>
-            </section>
-            <section class="challenge">
-                <h2>Challenge</h2>
-                <p><b><i>Challenge</i></b> adalah PR/Tugas/Kuis yang diberikan oleh Binar Academy kepada Siswa</p>
-                <button>
-                    <a href="#">Challenge</a>
-                </button>
-            </section>
-        </main>
-    </div>
 
-    <script src="./asset/script.js"></script>
+    <main>
+        <div class="container">
+            <section class="task textWhite">
+                <h2 class="textLight">Task</h2>
+                <p class="textLight"><b><i>Task</i></b> adalah PR/Tugas/Kuis yang diberikan oleh Fasilitator kepada Siswa</p>
+                <button class="btn bgSecondary">
+                    <a href="./dom-challenge/index.html" class="textPrimary">>> Task 1: DOM Manipulation</a>
+                </button>
+                <button class="btn bgSecondary">
+                    <a href="./tic-tac-toe-challenge/index.html" class="textPrimary">>> Task 2: Game Tic Tac Toe</a>
+                </button>
+            </section>
+            <section class="challenge textWhite">
+                <h2 class="textLight">Challenge</h2>
+                <p class="textLight"><b><i>Challenge</i></b> adalah PR/Tugas/Kuis yang diberikan oleh Binar Academy kepada Siswa</p>
+                <button class="btn">
+                    <a href="#" class="textDark">Challenge</a>
+                </button>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        Copyright 2022 - Web Sederhana
+    </footer>
+
+    <script src="./asset/js/script.js"></script>
 </body>
 </html>
