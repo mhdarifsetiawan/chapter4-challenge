@@ -4,6 +4,21 @@ body {
     min-height: 101vh;
 }
 
+/* general */
+a {
+    text-decoration: none;
+}
+
+section {
+    box-sizing: border-box;
+    padding: 1%;
+}
+
+/* Main */
+.nav {
+
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -29,8 +44,10 @@ header {
 
 main {
     display: flex;
+    flex-direction: column;
     margin: auto;
-    padding: 3%;
+    width: 96%;
+    padding: 2%;
 }
 
 .box-shadow {
