@@ -27,6 +27,12 @@ header {
     font-style: italic;
 }
 
+main {
+    display: flex;
+    margin: auto;
+    padding: 3%;
+}
+
 .box-shadow {
     box-shadow: black 0px 0px 20px 0px;
 }
