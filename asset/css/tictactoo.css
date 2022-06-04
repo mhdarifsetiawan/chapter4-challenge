@@ -1,6 +1,4 @@
 .board {
-    /* background-color: red; */
-    /* height: 100vh; */
     display: grid;
     grid-template-columns: repeat(3, auto);
     justify-content: center;
@@ -8,10 +6,12 @@
 }
 
 .box {
-    width: 50px;
-    height: 50px;
-    border: 1px solid;
+    width: 80px;
+    height: 80px;
+    border: 1px solid rgb(24, 24, 24);
     cursor: pointer;
+    display: flex;
+    margin: auto;
 }
 
 .box:first-child,
@@ -33,3 +33,57 @@
 .box:nth-child(9) {
     border-bottom: none;
 }
+
+.box.x,.box.o {
+    cursor: not-allowed;
+  }
+
+.box.x {
+    background-color: yellow;
+}
+
+.box.o {
+    background-color: red;
+}
+
+.box.o::after {
+    content: "O";
+    margin: auto;
+}
+
+.box.x::after {
+    content: "X";
+    margin: auto;
+}
+
+.winning-message {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    flex-direction: column;
+}
+
+.winning-message-color-o {
+    color: red;
+}
+
+.winning-message-color-x {
+    color: yellow;
+}
+
+.winning-message-color-seri {
+    color: white;
+}
+
+.winning-message.show {
+    display: flex;
+  }
+
+  .winning-message button {
+    font-size: 1.5rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+  }

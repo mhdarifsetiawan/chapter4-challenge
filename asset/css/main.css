@@ -41,6 +41,19 @@ body {
     color: #2b6777 !important;
 }
 
+/* Size */
+.fs-s {
+    font-size: 0.5rem;
+}
+
+.fs-m {
+    font-size: 0.7rem;
+}
+
+.fs-n {
+    font-size: 1rem;
+}
+
 /* Button */
 .btn {
     padding: 0.5rem;
@@ -50,4 +63,9 @@ body {
     border: none;
     border-radius: 0.4rem;
     cursor: pointer;
+}
+
+/* Space */
+.m-auto {
+    margin: auto;
 }

@@ -6,24 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css -->
     <link rel="stylesheet" href="../asset/css/main.css">
+    <link rel="stylesheet" href="../asset/css/homepage.css">
     <link rel="stylesheet" href="../asset/css/tictactoo.css">
+    <!-- <link rel="stylesheet" href="../asset/css/test.css"> -->
     <title>Tic Tac Toe</title>
 </head>
 <body>
-    <div class="board">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-    </div>
-    <center><button>Reset</button></center>
-
-    <center>MASIH DALAM BELUM SELESAI MAS EL</center>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/index.html">
+                    <p class="m-auto">Home</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="../dom-challenge/index.html">
+                        <p class="m-auto">Task 1</p>
+                        <p class="m-auto fs-m">DOM Manipulation</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="active" href="./index.html">
+                        <p class="m-auto">Task 2</p>
+                        <p class="m-auto fs-m">Tic Tac Toe Game</p>
+                    </a>
+                </li>
+              </ul>
+        </nav>
+        <div class="headerSection">
+            <h1>Task : 2</h1>
+            <h2>Tic Tac Toe Game</h2>
+            <p>Name : Muhammad Arif Setiawan</p>
+            <p>Class : Full Stack Web (FSW)</p>
+            <p>Wave : 23</p>
+            <p>Facilitator : Lilik Setiyawan</p>
+        </div>
+    </header>
+    
+    <main>
+        <section>
+            <div class="container">
+                <div class="board" id="board">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                  </div>
+                  <div class="winning-message" id="winningMessage">
+                    <div id="winning-message-text" class=""></div>
+                    <button id="restartButton" class="btn">Mulai Lagi!</button>
+                  </div>
+            </div>
+        </section>
+    </main>
 
     <script src="../asset/js/task-tictactoe.js"></script>
 </body>
