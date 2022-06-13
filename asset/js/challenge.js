@@ -1,12 +1,3 @@
-let choices = ["batu", "gunting", "kertas"];
-// console.log(choice);
-
-let randomChoice = Math.random();
-// console.log(randomChoice);
-
-let comChoice = choices[randomChoice];
-// console.log(comChoice);
-
 let userPoin = 0;
 let comPoin = 0;
 
@@ -34,15 +25,19 @@ function getComSelection() {
 }
 
 function getResult(comp, player) {
-    if(player == comp) return 'DRAW';
-    if(player == 'kertas') return (comp == 'batu') ? 'YOU WIN' : '<p>COM</p><p>WIN</p>';
-    if(player == 'batu') return (comp == 'gunting') ? 'YOU WIN' : '<p>COM</p><p>WIN</p>';
-    if(player == 'gunting') return (comp == 'kertas') ? 'YOU WIN' : '<p>COM</p><p>WIN</p>';
+    if(player == comp) return '<p class="draw">DRAW</p>';
+    if(player == 'kertas') return (comp == 'batu') ? '<p class="you-win">YOU</br>WIN</p>' : '<p class="com-win">COM</br>WIN</p>';
+    if(player == 'batu') return (comp == 'gunting') ? '<p class="you-win">YOU WIN</p>' : '<p class="com-win">COM WIN</p>';
+    if(player == 'gunting') return (comp == 'kertas') ? '<p class="you-win">YOU WIN</p>' : '<p class="com-win">COM WIN</p>';
 }
 
 
 const selection = document.querySelectorAll('#userSelection .select img');
-const disable = document.querySelectorAll('#userSelection .select');
+const comBg = document.querySelectorAll('#comSelection .select img');
+
+const userDisable = document.querySelectorAll('#userSelection .select');
+const comDisable = document.querySelectorAll('#comSelection .select');
+
 const restartBtn = document.getElementById('restartBtn');
 const infoWinner = document.querySelector('.boxInfoText');
 
@@ -55,13 +50,18 @@ function startGame() {
         // selected.classList.remove('bg-selected');
         selected.removeEventListener('click', handleClick);
         selected.addEventListener('click', handleClick, { once: true });
-        infoWinner.innerHTML = "VS";
+        infoWinner.innerHTML = '<p class="vs">VS</p>';
         
         // const bgSelected = document.querySelectorAll('.bg-selected');
         selected.classList.remove('bg-selected');
     });
-    disable.forEach(disabled => {
+
+    userDisable.forEach(disabled => {
         disabled.classList.remove('pointerevent');
+    });
+
+    comBg.forEach(comS => {
+        comS.classList.remove('bg-selected');
     });
 };
 
@@ -73,6 +73,14 @@ function handleClick(e) {
     const result = getResult(comSelection, playerSelection);
     placeMark(selected);
     infoWinner.innerHTML = result;
+
+    if(comSelection) {
+            const comBg = document.querySelectorAll('.com-'+comSelection);
+            comBg.forEach(comS => {
+                comS.classList.add('bg-selected');
+            });
+        };
+
 };
 
 
@@ -80,9 +88,8 @@ function placeMark(selected) {
     if(selected) {
         selected.classList.add('bg-selected');
         
-        disable.forEach(disabled => {
+        userDisable.forEach(disabled => {
             disabled.classList.add('pointerevent');
         });
-        
-    }
+    };
 };

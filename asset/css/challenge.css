@@ -1,3 +1,13 @@
+.h1 {
+    color: #F9B23D;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 49px;
+    text-transform: uppercase;
+}
+
 .challenge {
     width: 50%;
     display: flex;
@@ -21,14 +31,10 @@
 }
 
 #batu, #kertas, #gunting, #com-batu, #com-kertas, #com-gunting {
-    /* display: flex; */
-    width: 30%;
+    display: flex;
     padding: 10%;
-    /* background-color: aqua; */
     margin: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    /* cursor: pointer; */
+    box-sizing: border-box;
 }
 
 .select {
@@ -36,8 +42,8 @@
 }
 
 img {
-    width: 100%;
-    padding: 35%;
+    width: 80%;
+    padding: 10%;
 }
 
 .boxInfo {
@@ -50,10 +56,48 @@ img {
     margin: auto;
 }
 
+p.vs {
+    font-family: Open Sans;
+    font-weight: 700;
+    color: #BD0000;
+    font-size: 4rem;
+}
+
+.you-win, .com-win {
+    font-family: Open Sans;
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    font-weight: 700;
+    padding: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 1rem;
+    transform: rotate(-28.87deg);
+    background-color: #4C9654;
+    color: white;
+}
+
+.draw {
+    font-family: Open Sans;
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    font-weight: 700;
+    padding: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 1rem;
+    transform: rotate(-28.87deg);
+    background-color: #035B0C;
+    color: white;
+}
+
 
 /* Reset Button */
 .resetBtn {
     display: flex;
+    margin-top: -10%;
 }
 
 .reset {
@@ -64,8 +108,9 @@ img {
 }
 
 .resetBtn .reset img {
-    width: 30%;
+    width: 40%;
     margin: auto;
+    padding: 10%;
 }
 
 .bg-selected {
@@ -78,6 +123,9 @@ img {
 }
 
 .player1, .com1 {
+    font-family: Open Sans;
     display: flex;
     margin: auto;
+    font-size: 1.5rem;
+    font-weight: 600;
 }

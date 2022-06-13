@@ -8,7 +8,16 @@
     <link rel="stylesheet" href="../asset/css/main.css">
     <link rel="stylesheet" href="../asset/css/homepage.css">
     <link rel="stylesheet" href="../asset/css/challenge.css">
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <title>Challenge Chapter 4</title>
+    <style>
+        body {
+            background-color: #9C835F;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -44,7 +53,7 @@
 
     <main>
         <div id="content">
-            <section class="challenge">
+            <section id="challenge" class="challenge">
                 <div class="mainBoxGame">
                     <div class="h1">rock paper scissor</div>
                     <div class="playerBox">
@@ -63,15 +72,15 @@
                         <div class="boxInfo" id="winningMessage">
                             <div class="boxInfoText"></div>
                         </div>
-                        <div class="comSelection">
+                        <div class="comSelection" id="comSelection">
                             <p class="com1">Com</p>
-                            <div id="com-batu">
+                            <div id="com-batu" class="select">
                                 <img src="../asset/images/batu.png" alt="" class="com-batu">
                             </div>
-                            <div id="com-kertas">
+                            <div id="com-kertas" class="select">
                                 <img src="../asset/images/kertas.png" alt="" class="com-kertas">
                             </div>
-                            <div id="com-gunting">
+                            <div id="com-gunting" class="select">
                                 <img src="../asset/images/gunting.png" alt="" class="com-gunting">
                             </div>
                         </div>
