@@ -60,7 +60,7 @@ p.vs {
     font-family: Open Sans;
     font-weight: 700;
     color: #BD0000;
-    font-size: 4rem;
+    font-size: 8rem;
 }
 
 .you-win, .com-win {
@@ -97,7 +97,7 @@ p.vs {
 /* Reset Button */
 .resetBtn {
     display: flex;
-    margin-top: -10%;
+    margin-top: -15%;
 }
 
 .reset {

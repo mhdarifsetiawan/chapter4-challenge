@@ -1,21 +1,3 @@
-let userPoin = 0;
-let comPoin = 0;
-
-// console.log(boxChoice);
-
-// Mulai
-// startGame()
-
-// Tampil halaman utama
-
-// user mengklik trial button
-
-// user mengklik selection
-
-// Menampilkan log pilihan user
-
-// komputer mengklik pilihannya
-
 
 function getComSelection() {
     const computer = Math.floor(Math.random() * 3);
@@ -26,9 +8,9 @@ function getComSelection() {
 
 function getResult(comp, player) {
     if(player == comp) return '<p class="draw">DRAW</p>';
-    if(player == 'kertas') return (comp == 'batu') ? '<p class="you-win">YOU</br>WIN</p>' : '<p class="com-win">COM</br>WIN</p>';
-    if(player == 'batu') return (comp == 'gunting') ? '<p class="you-win">YOU WIN</p>' : '<p class="com-win">COM WIN</p>';
-    if(player == 'gunting') return (comp == 'kertas') ? '<p class="you-win">YOU WIN</p>' : '<p class="com-win">COM WIN</p>';
+    if(player == 'kertas') return (comp == 'batu') ? '<p class="you-win">PLAYER 1</br>WIN</p>' : '<p class="com-win">COM</br>WIN</p>';
+    if(player == 'batu') return (comp == 'gunting') ? '<p class="you-win">PLAYER 1 WIN</p>' : '<p class="com-win">COM WIN</p>';
+    if(player == 'gunting') return (comp == 'kertas') ? '<p class="you-win">PLAYER 1 WIN</p>' : '<p class="com-win">COM WIN</p>';
 }
 
 
@@ -47,12 +29,9 @@ restartBtn.addEventListener('click', startGame);
 
 function startGame() {
     selection.forEach(selected => {
-        // selected.classList.remove('bg-selected');
         selected.removeEventListener('click', handleClick);
         selected.addEventListener('click', handleClick, { once: true });
         infoWinner.innerHTML = '<p class="vs">VS</p>';
-        
-        // const bgSelected = document.querySelectorAll('.bg-selected');
         selected.classList.remove('bg-selected');
     });
 
