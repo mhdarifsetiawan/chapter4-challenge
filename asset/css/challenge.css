@@ -1,0 +1,77 @@
+.challenge {
+    width: 50%;
+    display: flex;
+    margin: auto;
+}
+
+.mainBoxGame {
+    width: 100%;
+}
+
+.playerBox {
+    display: flex;
+    margin-top: 5%;
+}
+
+.userSelection, .comSelection {
+    display: flex;
+    width: 35%;
+    margin: auto;
+    flex-direction: column;
+}
+
+#batu, #kertas, #gunting, #com-batu, #com-kertas, #com-gunting {
+    /* display: flex; */
+    width: 30%;
+    padding: 10%;
+    /* background-color: aqua; */
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    /* cursor: pointer; */
+}
+
+.select {
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+}
+
+.boxInfo {
+    display: flex;
+    width: 30%;
+    margin: auto;
+}
+
+.boxInfoText {
+    margin: auto;
+}
+
+
+/* Reset Button */
+.resetBtn {
+    display: flex;
+}
+
+.reset {
+    display: flex;
+    width: 20%;
+    margin: auto;
+    cursor: pointer;
+}
+
+.resetBtn .reset img {
+    width: 30%;
+    margin: auto;
+}
+
+.bg-selected {
+    background-color: rgba(255, 255, 255, 0.76);
+}
+
+.player1, .com1 {
+    display: flex;
+    margin: auto;
+}
