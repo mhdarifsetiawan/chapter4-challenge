@@ -35,40 +35,54 @@ function getComSelection() {
 
 function getResult(comp, player) {
     if(player == comp) return 'DRAW';
-    if(player == 'kertas') return (comp == 'batu') ? 'WIN' : '<p>COM</p><p>WIN</p>';
-    if(player == 'batu') return (comp == 'gunting') ? 'WIN' : '<p>COM</p><p>WIN</p>';
-    if(player == 'gunting') return (comp == 'kertas') ? 'WIN' : '<p>COM</p><p>WIN</p>';
+    if(player == 'kertas') return (comp == 'batu') ? 'YOU WIN' : '<p>COM</p><p>WIN</p>';
+    if(player == 'batu') return (comp == 'gunting') ? 'YOU WIN' : '<p>COM</p><p>WIN</p>';
+    if(player == 'gunting') return (comp == 'kertas') ? 'YOU WIN' : '<p>COM</p><p>WIN</p>';
 }
+
 
 const selection = document.querySelectorAll('#userSelection .select img');
-selection.forEach(function(selected) {
-    selected.addEventListener('click', function() {
+const disable = document.querySelectorAll('#userSelection .select');
+const restartBtn = document.getElementById('restartBtn');
+const infoWinner = document.querySelector('.boxInfoText');
+
+startGame();
+
+restartBtn.addEventListener('click', startGame);
+
+function startGame() {
+    selection.forEach(selected => {
+        // selected.classList.remove('bg-selected');
+        selected.removeEventListener('click', handleClick);
+        selected.addEventListener('click', handleClick, { once: true });
+        infoWinner.innerHTML = "VS";
         
-        const comSelection = getComSelection();
-        const playerSelection = selected.className;
-        const result = getResult(comSelection, playerSelection);
-
-        const bgSelected = document.getElementById(playerSelection);
-        bgSelected.classList.toggle('bg-selected');
-
-        const infoWinner = document.querySelector('.boxInfoText');
-        infoWinner.innerHTML = result;
-
+        // const bgSelected = document.querySelectorAll('.bg-selected');
+        selected.classList.remove('bg-selected');
     });
-});
+    disable.forEach(disabled => {
+        disabled.classList.remove('pointerevent');
+    });
+};
 
 
-function reset() {
+function handleClick(e) {
+    const selected = e.target;
+    const comSelection = getComSelection();
+    const playerSelection = selected.className;
+    const result = getResult(comSelection, playerSelection);
+    placeMark(selected);
+    infoWinner.innerHTML = result;
+};
 
-}
 
-
-// const pKertas = document.querySelector('.kertas');
-// pKertas.addEventListener('click', function() {
-//     const comSelection = getComSelection();
-//     const playerSelection = pKertas.className;
-//     const result = getResult(comSelection, playerSelection);
-
-//     const infoWinner = document.querySelector('.boxInfoText');
-//     infoWinner.innerHTML = result;
-// });
+function placeMark(selected) {
+    if(selected) {
+        selected.classList.add('bg-selected');
+        
+        disable.forEach(disabled => {
+            disabled.classList.add('pointerevent');
+        });
+        
+    }
+};
